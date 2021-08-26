@@ -40,7 +40,7 @@ class Relust extends Component{
         console.log(this.state.plater1Value);
 
     }
-    request=(url1,url2){
+    request(url1,url2){
         fetch(url2).then(res => 
             res.json()
         )
