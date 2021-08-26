@@ -7,7 +7,8 @@
     "build": "rimraf dist && webpack --env NODE_ENV=production",
     "start": "webpack-dev-server --env NODE_ENV=development --open",
     "deploy": "gh-pages -d dist -e 08",
-    "lint": "eslint  src --ext .js,.jsx  --color"
+    "lint": "eslint  src --ext .js,.vue  --color",
+    "test": "lint-staged"
   },
   "keywords": [],
   "author": "",
@@ -56,11 +57,12 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+  // "husky": {
+  //   "hooks": {
+  //     "pre-commit": "lint-staged"
+  //   }
+  // },
+  "pre-commit": "test",
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "prettier --write",
