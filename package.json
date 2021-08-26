@@ -8,7 +8,16 @@
     "start": "webpack-dev-server --env NODE_ENV=development --open",
     "deploy": "gh-pages -d dist -e 08",
     "lint": "eslint --ext .js src/",
-    "test": "lint-staged"
+    "test": "lint-staged",
+    "lint-staged": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"  // key words
+    }
+  },
+  "lint-staged": {
+    "**/*.js": "eslint --ext .js" // key words // key words
   },
   "keywords": [],
   "author": "",
@@ -62,8 +71,8 @@
   //     "pre-commit": "lint-staged"
   //   }
   // },
-  "pre-commit": "test",
-  "lint-staged": {
-    "*.js": "lint"
-  }
+  // "pre-commit": "test",
+  // "lint-staged": {
+  //   "*.js": "lint"
+  // }
 }

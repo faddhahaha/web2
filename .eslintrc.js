@@ -25,6 +25,7 @@ module.exports = {
         "curly":1,
         "no-new":'off',
         "one-var":'off',
+        "no-const-assign": 2,
         "eqeqeq":0,
         "padded-blocks":0,
         "space-infix-ops":0,

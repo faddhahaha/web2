@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom'
-
-const pp
+const pp = 7
+pp = 9
 class Relust extends Component{
     constructor(props){
         super(props);
