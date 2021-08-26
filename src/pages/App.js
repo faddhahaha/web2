@@ -20,10 +20,10 @@ import Relust from '@/components/relust';
                 <HashRouter>
                         <div style={{ fontSize:'30px',fontWeight:'600',margin:'40px 20px',display:'flex'}} >
                             
-                            <div style={{margin:'0 20px'}} onClick={()=>{this.onSwich('/ALL')}} >
+                            <div style={{margin:'0 20px'}} onClick={()=>{ this.onSwich('/ALL') }} >
                             <Link to='/ALL'  style={{color:navigationValue==='/'||navigationValue==='/ALL'||navigationValue==='/ALL/JavaScript'||navigationValue==='/ALL/CSS' ||navigationValue==='/ALL/java'||navigationValue==='/ALL/Ruby' ? 'red':'black'}} >  Popular </Link>   
                             </div>
-                            <div style={{margin:'0 20px'}} onClick={()=>{this.onSwich('/Battle')}}>
+                            <div style={{margin:'0 20px'}} onClick={()=>{ this.onSwich('/Battle') }}>
                             <Link to='/Battle'  style={{color: navigationValue==='/Battle'||navigationValue==='/Battle/relust' ? 'red':'black'}}> Battle</Link>   
                             </div>    
                         </div> 
