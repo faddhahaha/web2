@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && webpack --env NODE_ENV=production",
     "start": "webpack-dev-server --env NODE_ENV=development --open",
     "deploy": "gh-pages -d dist -e 08",
-    "lint": "eslint  app --ext .js,.jsx  --color"
+    "lint": "eslint  app --ext .js,.jsx  --color",
+    "test": "lint-staged"
   },
   "keywords": [],
   "author": "",
@@ -57,7 +57,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
-  "pre-commit": "lint",
+  "pre-commit": "test",
   "lint-staged": {
     "app/**/*.{js,jsx}": [
       "prettier --write",
