@@ -44,7 +44,8 @@ module.exports = (env)=>{
                             presets: [
                                 // 添加 preset-react
                                 require.resolve('@babel/preset-react'),
-                                [require.resolve('@babel/preset-env'), {modules: false}]
+                                [require.resolve('@babel/preset-env'), {modules: false}],
+                                ["@babel/plugin-proposal-class-properties",{"loose":true}]
                             ],
                             cacheDirectory: true
                         }

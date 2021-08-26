@@ -8,16 +8,19 @@
     "build": "rimraf dist && webpack --env NODE_ENV=production",
     "start": "webpack-dev-server --env NODE_ENV=development --open",
     "deploy": "gh-pages -d dist -e 08",
-    "lint": "eslint --fix src"
+    "lint": "eslint  app --ext .js,.jsx  --color"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/preset-env": "^7.14.8",
     "@babel/preset-react": "^7.14.5",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -54,5 +57,12 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
-  "pre-commit": "lint"
+  "pre-commit": "lint",
+  "lint-staged": {
+    "app/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix --color",
+      "git add"
+    ]
+  }
 }
