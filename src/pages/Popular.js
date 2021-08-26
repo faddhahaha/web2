@@ -104,7 +104,7 @@ class Popular extends Component {
                         {date.map((item, index) => {
                             return (
                                 <div className="col-lg-3 col-sm-12 col-md-6 " key={index}  >
-                                <div style={{backgroundColor:'#EBEBEB',display:'flex',flexDirection:'column', alignItems:'center', justifyContent: 'center',margin:'1% 1%',}}> 
+                                <div style={{backgroundColor:'#EBEBEB',display:'flex',flexDirection:'column', alignItems:'center', justifyContent: 'center',margin:'1% 1%'}}> 
                                     <h2 style={{margin:'10px 0'}}>#{index}</h2>
                                     <div style={{margin:'0 auto',display:' inline-block',textAlign:'center',width:'100%'}}>
                                         <img style={{width:'150px'}} src={item.owner.avatar_url} />
