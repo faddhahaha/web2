@@ -24,7 +24,7 @@ class Battle extends Component{
     details=()=>{
         this.props.history.push(`/Battle/relust?player1=${this.state.leftvalue}&player2=${this.state. rightvalue}`);
     }
-    clearLeft=()=>
+    clearLeft=()=>{
         this.setState({
             left:false,
             imgUrlLeft:'',     

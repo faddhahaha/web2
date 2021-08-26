@@ -8,7 +8,7 @@ import Relust from '@/components/relust';
             super(props);
             this.state={navigationValue:location.hash.substring(1)}
         }
-        onSwich= value =>{
+        onSwich(value) {
             this.setState({
                 navigationValue:value
             })

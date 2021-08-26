@@ -1,6 +1,6 @@
+
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Link} from 'react-router-dom'
 
 class Relust extends Component{
     constructor(props){
@@ -40,7 +40,7 @@ class Relust extends Component{
         console.log(this.state.plater1Value);
 
     }
-    request=(url1,url2)=>{
+    request(url1,url2){
         fetch(url2).then(res => 
             res.json()
         )
