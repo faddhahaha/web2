@@ -7,18 +7,9 @@
     "build": "rimraf dist && webpack --env NODE_ENV=production",
     "start": "webpack-dev-server --env NODE_ENV=development --open",
     "deploy": "gh-pages -d dist -e 08",
-    "lint": "eslint --ext .js src/",
-    "test": "lint-staged",
-    "lint-staged": "lint-staged"
+    "lint": "eslint --fix 08/src"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint-staged"  // key words
-    }
-  },
-  "lint-staged": {
-    "**/*.js": "eslint --ext .js" // key words // key words
-  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -66,13 +57,5 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
-  // "husky": {
-  //   "hooks": {
-  //     "pre-commit": "lint-staged"
-  //   }
-  // },
-  // "pre-commit": "test",
-  // "lint-staged": {
-  //   "*.js": "lint"
-  // }
+  "pre-commit": "lint"
 }
