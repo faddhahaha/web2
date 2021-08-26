@@ -1,6 +1,9 @@
 
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom'
+
+const pp
 
 class Relust extends Component{
     constructor(props){
@@ -14,7 +17,7 @@ class Relust extends Component{
         }
     }
     
-
+    
     componentDidMount(){
         let a =this.props.location.search.split('?');
         let b =a[1].split('&');
@@ -40,7 +43,7 @@ class Relust extends Component{
         console.log(this.state.plater1Value);
 
     }
-    request=(url1,url2){
+    request(url1,url2){
         fetch(url2).then(res => 
             res.json()
         )
@@ -101,7 +104,7 @@ class Relust extends Component{
                 
             <div style={{display:'flex',width:'100%',justifyContent:'space-around',height:'500px'}}>
 
-               <div style={{width:'20%',backgroundColor:'#EBEBEB',display:'flex',flexDirection:'column', alignItems:'center', justifyContent: 'center',margin:'1% 1%'}}> 
+               <div style={{width:'20%',backgroundColor:'#EBEBEB',display:'flex',flexDirection:'column', alignItems:'center', justifyContent: 'center',margin:'1% 1%',}}> 
                                     <h2 style={{margin:'10px 0'}}>{this.state.active?"Draw":"Winner"}</h2>
                                     <div style={{margin:'0 auto',display:' inline-block',textAlign:'center',width:'100%'}}>
                                         <img style={{width:'150px'}} src={player1.avatar_url} />
@@ -117,7 +120,7 @@ class Relust extends Component{
                                         </ul>
                                     </div>  
                 </div>
-                <div style={{width:'20%',backgroundColor:'#EBEBEB',display:'flex',flexDirection:'column', alignItems:'center', justifyContent: 'center',margin:'1% 1%'}}> 
+                <div style={{width:'20%',backgroundColor:'#EBEBEB',display:'flex',flexDirection:'column', alignItems:'center', justifyContent: 'center',margin:'1% 1%',}}> 
                                     <h2 style={{margin:'10px 0'}}>{this.state.active?"Draw":"Lost"}</h2>
                                     <div style={{margin:'0 auto',display:' inline-block',textAlign:'center',width:'100%'}}>
                                         <img style={{width:'150px'}} src={player2.avatar_url} />
