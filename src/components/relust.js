@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom'
 
 const pp
-const pop
 class Relust extends Component{
     constructor(props){
         super(props);
