@@ -4,7 +4,7 @@ import { HashRouter, Route, Link, Redirect, Switch}  from  'react-router-dom';
 const  Battle=lazy(()=>import('./Battle'));
 import Relust from '@/components/relust';
     class App extends Component {
-        constructor(props){
+        constructor(props)
             super(props);
             this.state={navigationValue:location.hash.substring(1)}
         }
